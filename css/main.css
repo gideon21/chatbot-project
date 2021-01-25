@@ -1,0 +1,67 @@
+body, html{
+    margin:0;
+    width: 100%;
+    justify-items: center;
+    background-color: #FF003D;
+}
+.main{
+    width: 500px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    color: #fff;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 300px;
+    font-size: 2.5em;
+    font-weight: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.myName{
+    color: #fff;
+    text-align: center;
+    line-height: -70px;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.textInfo{
+    color: #000;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn{
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 300px;
+    height: 60px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 35px 35px 35px 35px;
+    outline: none;
+    cursor: pointer;
+    background-color:#0079F2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn:hover{
+    background-color: #333333;
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 980px) {
+
+}
