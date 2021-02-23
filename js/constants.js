@@ -2,19 +2,36 @@
 
 const prompts = [
   ["hi"],
+
   ["hello"],
+
   ["i am fine", "fine", "great", "good", "wonderful", "fantastic", "sad", "happy", "hungry", "cool"],
+
   ["first year", "second year", "third year", "one", "two", "three", "postgraduate", "phd", "masters degree"],
-  ["web design and development", "web development", "math", "tv and media"],
-  ["1", "2", "3", "4", "5", "6", "7", "8","9"]
+
+  ["web design and development",
+    "web development",
+    "accounting and business ",
+    "software engineering",
+    "accounting & finance",
+    "User Experience",
+    "cyber security",
+    "mechanical engineering",
+    "computing",
+    "computer science",
+    "computer games development",
+    "Mathematics",
+  ],
+
+  ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
 ]
 // Possible responses, in corresponding order
 
-const replies =  [
+const replies = [
   ["hi, how are you"],
   ["hello, how are you"],
-  ["what is your name?"],
+  ["what is your name"],
   ["what are you studing"],
   ["from 1 to 10 how was semester one"],
   ["thank you"]
@@ -26,12 +43,23 @@ const replies =  [
 
 const fname = [
   ["what year are you in"]
-  
+
 ]
 
 // Random for any other user inputyear one
 
 const alternative = [
   ["i do not understand try again"]
-  
+
 ]
+
+
+let csvContent = "data:text/csv;charset=utf-8,";
+
+rows.forEach(function(rowArray) {
+    let row = rowArray.join(",");
+    csvContent += row + "\r\n";
+});
+
+var encodedUri = encodeURI(csvContent);
+window.open(encodedUri);
