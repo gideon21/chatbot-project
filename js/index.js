@@ -22,27 +22,28 @@ function output(input) {
   // Remove digits - not sure if this is best
   // But solves problem of entering something like 'hi1'
 
-  let text = input.toLowerCase().trim();
+  let text = input.toLowerCase().replace(/^[a-zA-Z]{7}$/).trim();
   text = text
     .replace(/ a /g, " ") // 'tell me a story' -> 'tell me story'
     .replace(/i feel /g, "")
     .replace(/whats/g, "what is")
     .replace(/please /g, "")
     .replace(/ please/g, "")
-    .replace(/r u/g, "are you");
-
+    .replace(/r u/g, "are you")
+    .replace(/i am/g, "i'm")
     
+ 
 
     
   if (compare(prompts, replies, text)) {
     // Search for exact match in `prompts`
     product = compare(prompts, replies, text);
-  }else if (text.match(/name/g)) {
-    product = fname[Math.floor(Math.random() * fname.length)];
+  }else if (text.match(/^[a-zA-Z]+(?:-[a-zA-Z]+)*$/gm)) {
+    product = academic[Math.floor(Math.random() * academic.length)];
   }else {
     product = alternative[Math.floor(Math.random() * alternative.length)];
   }
-    
+ 
 
   // Update DOM
   addChat(input, product);

@@ -5,9 +5,9 @@ const prompts = [
 
   ["hello"],
 
-  ["i am fine", "fine", "great", "good", "wonderful", "fantastic", "sad", "happy", "hungry", "cool"],
+  ["i'm fine","i'm great","i'm good","i'm doing well","i'm wonderful","i'm fantastic","i'm sad","i'm happy","i'm hungry", "fine", "great", "good", "wonderful", "fantastic", "sad", "happy", "hungry", "well"],
 
-  ["first year", "second year", "third year", "one", "two", "three", "postgraduate", "phd", "masters degree"],
+  ["1","2","3","4","first year", "second year", "third year", "one", "two", "three", "postgraduate", "phd", "masters degree"],
 
   ["web design and development",
     "web development",
@@ -21,45 +21,33 @@ const prompts = [
     "computer science",
     "computer games development",
     "Mathematics",
+    "ux developer",
+    "ui developer",
+    "it"
   ],
 
-  ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+  ["very good", "not good"]
 
 ]
 // Possible responses, in corresponding order
 
 const replies = [
-  ["hi, how are you"],
-  ["hello, how are you"],
-  ["what is your name"],
-  ["what are you studing"],
-  ["from 1 to 10 how was semester one"],
-  ["thank you"]
-
-
+  ["Hi, how are you?"],
+  ["Hello, how are you?"],
+  ["What is your name?"],
+  ["What are you studing?"],
+  ["How was semester one? (very good, not good)"],
+  ["Thank you"]
 ]
 
 // replies after you type in name
-
-const fname = [
-  ["what year are you in"]
-
+const academic = [
+  ["What academic year are you in"]
 ]
 
 // Random for any other user inputyear one
-
 const alternative = [
-  ["i do not understand try again"]
+  ["I do not understand try again"]
 
 ]
 
-
-let csvContent = "data:text/csv;charset=utf-8,";
-
-rows.forEach(function(rowArray) {
-    let row = rowArray.join(",");
-    csvContent += row + "\r\n";
-});
-
-var encodedUri = encodeURI(csvContent);
-window.open(encodedUri);

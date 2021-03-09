@@ -1,4 +1,4 @@
 window.onload = (event) => {
-    alert("page is fully loaded");
+    alert("Say Hi!");
   }, 900;
 
